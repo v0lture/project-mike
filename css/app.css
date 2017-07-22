@@ -63,17 +63,18 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
 /* title bar */
 .titlebar {
     height: 64px;
-    background: #000;
+    background: #111;
   -webkit-user-select: none;
 }
 
 .titlebar > .draggable {
     -webkit-app-region: drag;
     height: 15px;
+	background: #090909;
 }
 
 .titlebar > .title {
-    padding: 0px 15px;
+    padding: 5px 15px;
     margin-top: -2.5px;
 }
 
