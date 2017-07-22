@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome to Project Mike</title>
+
+        <!-- Fonts & Icons -->
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- css -->
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="stylesheet" href="css/app.css">
+
+        <!-- js -->
+    </head>
+
+    <body>
+
+        <div class="titlebar">
+            <div class="draggable"></div>
+            <div class="right title">
+                <a onclick="window.close();" class="btn-floating waves-effect waves-light transparent z-depth-0"><i class="material-icons">close</i></a>
+            </div>
+            <div class="title">
+                <a class="btn-floating transparent z-depth-0"></a>
+                Welcome to Project Mike
+            </div>
+        </div>
+        
+        <div class="row">
+
+            <div class="col s8 about">
+
+                <h4>Hi!</h4>
+                <p>Welcome to Project Mike.</p>
+                <br />
+                <h4>Realtime and customizable</h4>
+                <p>Project Mike offers realtime messaging with all your friends and gives you a lot of customizations to use in all your chats.</p>
+                <br />
+                <h4>Get started</h4>
+                <p>Login or signup on the right.</p>
+                <br />
+            </div>
+
+            <div class="col s4 login">
+
+                
+
+            </div>
+
+        </div>
+
+    </body>
+
+    <script>
+        // You can also require other files to run in this process
+        window.jQuery = window.$ = require('jquery');
+        window.Hammer = require("hammerjs");
+        require('./renderer.js');
+    </script>
+    <script src="js/materialize.min.js"></script>  
+    <script src="js/element-engine.js"></script>  
+</html>
