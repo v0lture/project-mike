@@ -5,7 +5,7 @@
         <title>Project Mike</title>
 
         <!-- Fonts & Icons -->
-        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <!-- css -->
@@ -16,8 +16,49 @@
     </head>
 
     <body>
+
+        <div class="titlebar">
+            <div class="draggable"></div>
+            <div class="right title">
+                <a class="btn-floating waves-effect waves-light transparent z-depth-0"><i class="material-icons">remove</i></a>
+                <a class="btn-floating waves-effect waves-light transparent z-depth-0"><i class="material-icons">fullscreen</i></a>
+                <a class="btn-floating waves-effect waves-light transparent z-depth-0"><i class="material-icons">close</i></a>
+            </div>
+            <div class="title">
+                <a class="btn-floating waves-effect waves-light transparent z-depth-0"><i class="material-icons">menu</i></a>
+                <span class="user">username</span> &mdash; Project Mike
+            </div>
+        </div>
         
-        
+        <div class="row">
+
+            <div class="col s4 convoview">
+                <!-- conversations view -->
+                <div class="identity z-depth-2">
+                    <a class="btn-floating waves-effect waves-light transparent z-depth-0 right"><i class="material-icons">edit</i></a>
+                    <span class="msg truncate"><i class="material-icons left">chat_bubble_outline</i> Hello world!</span>
+                    <span class="state">I am <span class="state online">Online</span></span>
+                </div>
+
+                <div class="convolist">
+                    
+                </div>
+            </div>
+
+            <div class="col s8 chatview">
+                <!-- chat view -->
+                <div class="identity z-depth-2">
+                    <a class="btn-floating waves-effect waves-light transparent z-depth-0 right"><i class="material-icons">settings</i></a>
+                    <span class="msg">Group</span><br />
+                    <span class="members"><b>4</b> &mdash; <span class="state offline">@onewiththecore</span>, <span class="state away">@theprime</span>, <span class="state online">@maxbycode</span>, <span class="state busy">@eggroll</span></span>
+                </div>
+
+                <div class="contents">
+
+                </div>
+            </div>
+
+        </div>
 
     </body>
 

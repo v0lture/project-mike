@@ -13,7 +13,7 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({width: 1200, height: 800, frame: false})
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -58,3 +58,4 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+require("./firebase.js");

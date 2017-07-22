@@ -1,8 +1,12 @@
 body {
-    background: black;
+    background: #303030;
     color: white;
     font-family: "Rubik", sans-serif;
     overflow: hidden;
+}
+
+p {
+    margin: 0;
 }
 
 /* materialize */
@@ -56,53 +60,93 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
     color: black;
 }
 
-/* toolbox */
-.toolbox {
-    background: #212121;
-    width: 100vw;
-    height: 100vh;
-    max-height: 100vh;
-    overflow: hidden;
+/* title bar */
+.titlebar {
+    height: 64px;
+    background: #000;
+  -webkit-user-select: none;
 }
 
-.toolbox > * > * > .scroll {
-    overflow-y: auto;
-    padding: 15px;
-    height: calc(100vh - 48px);
+.titlebar > .draggable {
+    -webkit-app-region: drag;
+    height: 15px;
 }
 
-.header {
-    color: white;
+.titlebar > .title {
+    padding: 0px 15px;
+    margin-top: -2.5px;
+}
+
+.titlebar > .title > .user {
     font-weight: 700;
 }
 
-.header > small {
-    font-weight: 400;
-    color: #eee;
-    text-transform: uppercase;
-}
-
-/* wizard */
-.wizard {
-    background: #ffc107;
-    color: black;
-    width: 100vw;
+/* chat view */
+.chatview {
     height: 100vh;
-    max-height: 100vh;
-    overflow: hidden;
-    display: none;
-}
-
-.wizard > .scroll {
     overflow-y: auto;
-    padding: 15px;
+    overflow-x: hidden;
+    width: 100%;
+    background: #424242;
+}
+
+.identity {
+    background: #212121;
+    color: white;
+    padding: 5px 15px;
+    height: 52px;
+    -webkit-user-select: none;
+}
+
+.chatview > .contents {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: calc(100vh - 52px);
+}
+
+/* convo view */
+.convoview {
+    width: 100%;
     height: 100vh;
+    overflow-y: auto;
+    overflow-x: auto;
 }
 
-.wizard > .scroll > .step > .header {
-    color: black;
+.convoview > .convolist {
+    height: calc(100vh - 52px);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.wizard > .scroll > .step > .header > small {
-    color: #373737;
+.identity > .state {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.state.online {
+    color: #4CAF50;
+}
+
+.state.away {
+    color: #FFC107;
+}
+
+.state.busy {
+    color: #F44336;
+}
+
+.state.offline {
+    color: #BDBDBD;
+}
+
+.identity > .members {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.identity > .msg > .material-icons {
+    font-size: 24px;
+    margin-right: 5px;
 }
