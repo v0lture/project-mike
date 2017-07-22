@@ -22,7 +22,7 @@
             <div class="right title">
                 <a class="btn-floating waves-effect waves-light transparent z-depth-0"><i class="material-icons">remove</i></a>
                 <a class="btn-floating waves-effect waves-light transparent z-depth-0"><i class="material-icons">fullscreen</i></a>
-                <a class="btn-floating waves-effect waves-light transparent z-depth-0"><i class="material-icons">close</i></a>
+                <a onclick="window.close();" class="btn-floating waves-effect waves-light transparent z-depth-0"><i class="material-icons">close</i></a>
             </div>
             <div class="title">
                 <a class="btn-floating waves-effect waves-light transparent z-depth-0"><i class="material-icons">menu</i></a>
@@ -47,14 +47,58 @@
 
             <div class="col s8 chatview">
                 <!-- chat view -->
+
+                <!-- Group identity bar framework:  -->
                 <div class="identity z-depth-2">
                     <a class="btn-floating waves-effect waves-light transparent z-depth-0 right"><i class="material-icons">settings</i></a>
-                    <span class="msg">Group</span><br />
-                    <span class="members"><span class="state offline pill">@onewiththecore</span> <span class="state away pill">@theprime</span> <span class="state online pill">@maxbycode</span> <span class="state busy pill">@eggroll</span></span>
-                </div>
+                    <p class="title">Group</p>
+                    <div class="userarray">
+                        <img class="state busy picture" src="https://placehold.it/32x32"></img>
+                        <img class="state online picture" src="https://placehold.it/32x32"></img>
+                        <img class="state away picture" src="https://placehold.it/32x32"></img>
+                        <img class="state online picture" src="https://placehold.it/32x32"></img>
+                        <img class="state busy picture" src="https://placehold.it/32x32"></img>
+                        <img class="state busy picture" src="https://placehold.it/32x32"></img>
+                        <img class="state offline picture" src="https://placehold.it/32x32"></img>
+                    </div>
+                </div>   
+
+                <!-- 1-1 identity bar framework:  -->
+                 <!-- <div class="identity z-depth-2">
+                    <a class="btn-floating waves-effect waves-light transparent z-depth-0 right"><i class="material-icons">settings</i></a>
+                    <div class="identitypic">
+                        <img class="state busy picture" src="https://placehold.it/48x48"></img>
+                        <p class="user">@onewiththecore</p>
+                        <p class="status">enjoying DEF CON</p>
+                    </div>
+                </div>   -->
 
                 <div class="contents">
+                    <div class="theme">
 
+                        <div class="msgwrapper">
+                            <div class="left msg">
+
+                                <div class="msgbox">
+                                    <p class="msgtext">hiya!</p>
+                                    <span class="user">@onewiththecore &mdash; 12:07 7/22/17</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="msgspacer"></div>
+                        <div class="msgwrapper">
+                            <div class="right msg">
+
+                                <div class="msgbox">
+                                    <p class="msgtext">hi friendo!</p>
+                                    <span class="user">Delivered &mdash; 12:07 7/22/17</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 

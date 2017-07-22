@@ -94,15 +94,19 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
     background: #212121;
     color: white;
     padding: 5px 15px;
-    height: 52px;
+    height: 64px;
     -webkit-user-select: none;
+}
+
+.identity > a.btn-floating.right {
+    margin-top: 7.5px;
 }
 
 .chatview > .contents {
     overflow-y: auto;
     overflow-x: hidden;
     width: 100%;
-    height: calc(100vh - 52px);
+    height: calc(100vh - 64px);
 }
 
 /* convo view */
@@ -114,7 +118,7 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
 }
 
 .convoview > .convolist {
-    height: calc(100vh - 52px);
+    height: calc(100vh - 64px);
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -141,22 +145,22 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
     color: #BDBDBD;
 }
 
-.state.online.pill {
+.state.online.pill, .state.online.circle {
     background: #4CAF50;
     color: white;
 }
 
-.state.away.pill {
+.state.away.pill, .state.away.circle {
     background: #FFC107;
     color: black;
 }
 
-.state.busy.pill {
+.state.busy.pill, .state.busy.circle {
     background: #F44336;
     color: white;
 }
 
-.state.offline.pill {
+.state.offline.pill, .state.offline.circle {
     background: #BDBDBD;
     color: black;
 }
@@ -164,6 +168,36 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
 .state.pill {
     padding: 2.5px 5px;
     border-radius: 5px;
+}
+
+.state.circle {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
+
+.state.picture {
+    border-radius: 50%;
+    border: solid 2.5px;
+    height: 48px;
+    width: auto;
+    margin-top: 2px;
+}
+
+.userarray > .state.picture {
+    height: 32px;
+}
+
+.identity > .identitypic > .user {
+    margin-left: 58px;
+    margin-top: -50px;
+}
+
+.identity > .identitypic > .status {
+    margin-left: 58px;
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: 300;
 }
 
 .identity > .members {
@@ -174,4 +208,39 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
 .identity > .msg > .material-icons {
     font-size: 24px;
     margin-right: 5px;
+}
+
+/* messages layout */
+.theme > .msgwrapper > .msg > .msgbox {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.theme > .msgwrapper > .msg {
+    padding: 15px;
+}
+
+.theme > .msgwrapper > .msg > .msgbox > .user {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.msgwrapper {
+    width: 100%;
+}
+
+.msgspacer {
+    height: 72px;
+}
+
+/* default theme colors */
+.theme > .msgwrapper > .left.msg > .msgbox {
+    background: #BDBDBD;
+    color: black;
+}
+
+.theme > .msgwrapper > .right.msg > .msgbox {
+    background: #00BCD4;
+    color: black;
 }
