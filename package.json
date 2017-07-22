@@ -1,0 +1,19 @@
+{
+  "name": "project-mike",
+  "version": "0.0.1",
+  "description": "Desktop app for Project Mike",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/v0lture/project-mike",
+  "author": "v0lture",
+  "license": "GPLv3",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.2.1"
+  }
+}

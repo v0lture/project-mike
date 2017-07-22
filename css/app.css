@@ -1,0 +1,108 @@
+body {
+    background: black;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    overflow: hidden;
+}
+
+/* materialize */
+.col {
+    padding: 0 !important;
+}
+
+.tabs {
+    background: #323232;
+}
+
+h5 {
+    margin: 0;
+}
+
+.tabs .indicator {
+    background: #ffb300;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    color: #ffc107;
+}
+
+.tabs .tab a {
+    color: rgba(255, 193, 7, 0.7);
+}
+
+.collection .collection-item.avatar {
+    background-color: #323232;
+}
+
+.input-field label {
+    color: #000;
+}
+
+.input-field input[type=text]:focus + label {
+    color: #000;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+    color: black;
+}
+
+/* toolbox */
+.toolbox {
+    background: #212121;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.toolbox > * > * > .scroll {
+    overflow-y: auto;
+    padding: 15px;
+    height: calc(100vh - 48px);
+}
+
+.header {
+    color: white;
+    font-weight: 700;
+}
+
+.header > small {
+    font-weight: 400;
+    color: #eee;
+    text-transform: uppercase;
+}
+
+/* wizard */
+.wizard {
+    background: #ffc107;
+    color: black;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    display: none;
+}
+
+.wizard > .scroll {
+    overflow-y: auto;
+    padding: 15px;
+    height: 100vh;
+}
+
+.wizard > .scroll > .step > .header {
+    color: black;
+}
+
+.wizard > .scroll > .step > .header > small {
+    color: #373737;
+}
