@@ -31,21 +31,27 @@
         </div>
 
         <!-- modals -->
-        <div id="userState" class="modal">
+        <div id="userState" class="modal modal-fixed-footer">
             <div class="modal-content">
                 <h4>Update User Status and Message</h4>
                 <div class="input-field">
                     <input type="text" id="userStateMessage"></input>
                     <label for="userStateMessage">Status Message</label>
                 </div>
-                <div class="input-field">
-                    <input type="text" id="userStateMessage"></input>
-                    <label for="userStateMessage">Status Message</label>
+                
+                <div class="input-field col s12">
+                    <select id="userStatus">
+                        <option value="0">Invisible</option>
+                        <option value="1" selected>Online</option>
+                        <option value="2">Away</option>
+                        <option value="3">Busy</option>
+                    </select>
+                    <label>Status</label>
                 </div>
             </div>
             <div class="modal-footer">
                 <a href="#!" class="modal-action modal-close waves-effect waves-light white-text btn-flat">Close</a>
-                <a href="#!" class="modal-action modal-close waves-effect waves-light white-text btn-flat">Save</a>
+                <a href="#!" onclick="modalUpdateUser()" class="waves-effect waves-light white-text btn-flat">Save</a>
             </div>
         </div>
 
@@ -61,7 +67,7 @@
             <div class="col s4 convoview">
                 <!-- conversations view -->
                 <div class="identity z-depth-2">
-                    <a class="btn-floating waves-effect waves-light transparent z-depth-0 right"><i class="material-icons">edit</i></a>
+                    <a onclick="$('#userState').modal('open');" class="modal-trigger btn-floating waves-effect waves-light transparent z-depth-0 right"><i class="material-icons">edit</i></a>
                     <div class="identitypic">
                         <img class="state offline picture" src="https://placehold.it/48x48" id="appUserState"></img>
                         <p class="user" id="appUserMentioname">...</p>

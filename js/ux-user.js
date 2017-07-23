@@ -53,3 +53,18 @@ ipcMain.on("ui-user.listenUser", (e,a) => {
         window.webContents.send("ux-user.userUpdate", data.val());
     });
 });
+
+ipcMain.on("ui-user.updateUserState", (e, a) => {
+    var uid = firebase.auth().currentUser.uid;    
+
+    if(a.state >= 0 && a.state <= 4){
+        firebase.database().ref("states/" + uid).set({
+            state: a.state,
+            msg: a.msg
+        });
+
+        e.sender.send("ux-user.updateUserState", {state:"success"});
+    } else {
+        e.sender.send("ux-user.updateUserState", {state:"error","error":"State value must be within 0-4."});
+    }
+});

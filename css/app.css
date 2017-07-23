@@ -14,6 +14,10 @@ p {
 }
 
 /* materialize */
+.modal-footer, .modal-content {
+    background: #424242 !important;
+}
+
 .col {
     padding: 0 !important;
 }
