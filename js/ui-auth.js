@@ -62,10 +62,6 @@ function validateAuth() {
     ipcRenderer.send("ui-auth.helloworld");
 }
 
-$(document).ready(() => {
-    validateAuth();
-});
-
 // handle return events
 ipcRenderer.on("ux-auth.register", (e, a) => {
     if(a.state == "error"){
@@ -84,7 +80,11 @@ ipcRenderer.on("ux-auth.login", (e, a) => {
 });
 
 ipcRenderer.on("ux-auth.loggedin", (e, a) => {
-    window.location.href="index.html";
+    if(a.user.displayName){
+        window.location.href = "index.html";
+    } else {
+        window.location.href = "onboarding.html";
+    }
 });
 
 ipcRenderer.on("ux-auth.loggedout", (e, a) => {

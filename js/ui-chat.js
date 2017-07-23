@@ -7,6 +7,10 @@ ipcRenderer.on("ux-auth.loggedout", (e, a) => {
 ipcRenderer.on("ux-auth.loggedin", (e, a) => {
     console.log("Hi! Logged in as:");
     console.log(a.user);
+
+    if(!a.user.displayName){
+        window.location.href="onboarding.html";
+    }
 });
 
 $(document).ready(() => {

@@ -1,5 +1,6 @@
 const {ipcMain} = require("electron");
 const firebase = require("firebase");
+const uxuser = require("./ux-user.js");
 
 var config = {
     apiKey: "AIzaSyAvPKG4Mz6cpdDXCQvDOrhii-znaOFjHlk",
@@ -16,15 +17,19 @@ let user;
 
 exports.setWindow = (bw) => {
      window = bw;
+     uxuser.setFirebase(firebase);
+    uxuser.setWindow(window);
 }
 
 // register
 ipcMain.on("ui-auth.register", (e, a) => {
+    errhap = false;
     console.log("Registering...");
     firebase.auth().createUserWithEmailAndPassword(a.email, a.pass).catch((err) => {
+        errhap = true;
         e.sender.send("ux-auth.register", {state:"error", error:err.message});
-        return;
     });
+            
     e.sender.send("ux-auth.register", {state:"success"});
 });
 

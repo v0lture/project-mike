@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Welcome to Project Mike</title>
+        <title>Setting Up Project Mike</title>
 
         <!-- Fonts & Icons -->
         <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700" rel="stylesheet">
@@ -15,7 +15,7 @@
         <!-- js -->
     </head>
 
-    <body onload="validateAuth();">
+    <body>
 
         <div class="titlebar">
             <div class="draggable"></div>
@@ -24,7 +24,7 @@
             </div>
             <div class="title">
                 <a class="btn-floating transparent z-depth-0"></a>
-                Welcome to Project Mike
+                Setting Up Project Mike
             </div>
         </div>
         
@@ -32,35 +32,28 @@
 
             <div class="col s8 about">
 
-                <h4>Hi!</h4>
-                <p>Welcome to Project Mike.</p>
+                <h4>Thanks for signing up!</h4>
+                <p>We just have a few more details to collect and you can begin.</p>
                 <br />
-                <h4>Realtime and customizable</h4>
-                <p>Project Mike offers realtime messaging with all your friends and gives you a lot of customizations to use in all your chats.</p>
-                <br />
-                <h4>Get started</h4>
-                <p>Login or signup on the right.</p>
-                <br />
+                <h4>Setup your account</h4>
+                <p>Welcome to Project Mike, setup your account on the right side and then you can start messaging.</p>
+                
             </div>
 
             <div class="col s4 login">
 
                 <div class="inputs">
                     <div class="input-field">
-                        <input type="text" id="email"></input>
-                        <label for="email">Email</label>
+                        <input type="text" id="username"></input>
+                        <label for="username">Mention name</label>
                     </div>
 
-                    <div class="input-field">
-                        <input type="password" id="password"></input>
-                        <label for="password">Password</label>
-                    </div>
+                    <p>This will be used for your friends to find your account to message each other.</p><br />
 
                     <p id="errormsgwrap" style="display: none;"><i class="material-icons left">warning</i> <span id="errormsg"></span></p>
                     <br />
                     <div class="center-align">
-                        <a onclick="register();" class="btn-flat waves-effect waves-light white-text">Register</a>
-                        <a onclick="login();" class="btn waves-effect waves-light accent black-text">Login</a>
+                        <a onclick="updateUser();" class="btn waves-effect waves-light accent black-text">Continue</a>
                     </div>
                 </div>
 
@@ -93,5 +86,5 @@
         window.Hammer = require("hammerjs");
     </script>
     <script src="js/materialize.min.js"></script> 
-    <script src="js/ui-auth.js"></script>
+    <script src="js/ui-user.js"></script>
 </html>
