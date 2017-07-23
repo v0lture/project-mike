@@ -45,19 +45,40 @@
 
             <div class="col s4 login">
 
-                <div class="input-field">
-                    <input type="text" id="email"></input>
-                    <label for="email">Email</label>
+                <div class="inputs">
+                    <div class="input-field">
+                        <input type="text" id="email"></input>
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="input-field">
+                        <input type="password" id="password"></input>
+                        <label for="password">Password</label>
+                    </div>
+
+                    <p id="errormsgwrap" style="display: none;"><i class="material-icons left">warning</i> <span id="errormsg"></span></p>
+                    <br />
+                    <div class="center-align">
+                        <a onclick="register();" class="btn-flat waves-effect waves-light white-text">Register</a>
+                        <a onclick="login();" class="btn waves-effect waves-light accent black-text">Login</a>
+                    </div>
                 </div>
 
-                <div class="input-field">
-                    <input type="password" id="password"></input>
-                    <label for="password">Password</label>
-                </div>
-
-                <div class="center-align">
-                    <a onclick="register();" class="btn-flat waves-effect waves-light white-text">Register</a>
-                    <a onclick="register();" class="btn waves-effect waves-light accent black-text">Login</a>
+                <div class="loader center-align" style="display: none;">
+                    <div class="preloader-wrapper active">
+                        <div class="spinner-layer spinner-blue-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                                <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <p id="loadermsg">...</p>
                 </div>
 
             </div>
