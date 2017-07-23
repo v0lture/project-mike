@@ -26,7 +26,26 @@
             </div>
             <div class="title">
                 <a class="btn-floating waves-effect waves-light transparent z-depth-0"><i class="material-icons">menu</i></a>
-                <span class="user">@maxbycode</span> &mdash; Project Mike
+                <span class="user" id="titleBarUser">...</span> &mdash; Project Mike
+            </div>
+        </div>
+
+        <!-- modals -->
+        <div id="userState" class="modal">
+            <div class="modal-content">
+                <h4>Update User Status and Message</h4>
+                <div class="input-field">
+                    <input type="text" id="userStateMessage"></input>
+                    <label for="userStateMessage">Status Message</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="userStateMessage"></input>
+                    <label for="userStateMessage">Status Message</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-light white-text btn-flat">Close</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-light white-text btn-flat">Save</a>
             </div>
         </div>
 
@@ -44,9 +63,9 @@
                 <div class="identity z-depth-2">
                     <a class="btn-floating waves-effect waves-light transparent z-depth-0 right"><i class="material-icons">edit</i></a>
                     <div class="identitypic">
-                        <img class="state busy picture" src="https://placehold.it/48x48"></img>
-                        <p class="user">@maxbycode</p>
-                        <p class="status">code jamming</p>
+                        <img class="state offline picture" src="https://placehold.it/48x48" id="appUserState"></img>
+                        <p class="user" id="appUserMentioname">...</p>
+                        <p class="status" id="appUserStatus">...</p>
                     </div>
                 </div>
 

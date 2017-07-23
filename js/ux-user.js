@@ -43,3 +43,13 @@ ipcMain.on("ui-user.mentioname", (e, a) => {
         e.sender.send("ux-user.mentioname", {state:"error",error:"Authentication failed"});
     }
 });
+
+
+ipcMain.on("ui-user.listenUser", (e,a) => {
+    var user = firebase.auth().currentUser;
+    var userState = firebase.database().ref("states/"+user.uid);
+
+    userState.on("value", (data) => {
+        window.webContents.send("ux-user.userUpdate", data.val());
+    });
+});
